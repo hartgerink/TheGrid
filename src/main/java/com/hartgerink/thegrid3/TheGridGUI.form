@@ -6,11 +6,16 @@
     </Component>
     <Component class="javax.swing.ButtonGroup" name="buttonGroupPolygon">
     </Component>
-    <Menu class="javax.swing.JMenuBar" name="jMenuBar">
+    <Menu class="javax.swing.JMenuBar" name="jMenuBar1">
       <SubComponents>
-        <Menu class="javax.swing.JMenu" name="jMenuFile">
+        <Menu class="javax.swing.JMenu" name="jMenu1">
           <Properties>
             <Property name="text" type="java.lang.String" value="File"/>
+          </Properties>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="jMenu2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Edit"/>
           </Properties>
         </Menu>
       </SubComponents>
@@ -20,7 +25,7 @@
     <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
   <SyntheticProperties>
-    <SyntheticProperty name="menuBar" type="java.lang.String" value="jMenuBar"/>
+    <SyntheticProperty name="menuBar" type="java.lang.String" value="jMenuBar1"/>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
     <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
   </SyntheticProperties>
@@ -55,7 +60,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
                               <Component id="jPanelClickOnScreen" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jPanelClickOnGrid" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jPanelClickOnGrid" alignment="0" pref="163" max="32767" attributes="0"/>
                           </Group>
                           <Component id="jPanelToolSelection" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
@@ -85,7 +90,7 @@
                       <Component id="jPanelClickOnScreen" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jPanelToolSelection" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="102" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="99" max="32767" attributes="0"/>
                   </Group>
                   <Component id="theGrid" max="32767" attributes="0"/>
               </Group>
@@ -980,7 +985,7 @@
                           <Component id="jTextFieldClickScreenY" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="13" max="32767" attributes="0"/>
+                  <EmptySpace pref="26" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>

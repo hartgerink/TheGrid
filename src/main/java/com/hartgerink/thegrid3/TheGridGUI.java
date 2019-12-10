@@ -119,8 +119,9 @@ public class TheGridGUI extends javax.swing.JFrame {
         jPanelBlank = new javax.swing.JPanel();
         jLabelColorMessage = new javax.swing.JLabel();
         theGrid = new com.hartgerink.thegrid3.TheGrid();
-        jMenuBar = new javax.swing.JMenuBar();
-        jMenuFile = new javax.swing.JMenu();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -648,7 +649,7 @@ public class TheGridGUI extends javax.swing.JFrame {
                         .addComponent(jLabelClickScreenY)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTextFieldClickScreenY, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(13, Short.MAX_VALUE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
         jPanelClickOnScreenLayout.setVerticalGroup(
             jPanelClickOnScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -831,10 +832,13 @@ public class TheGridGUI extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        jMenuFile.setText("File");
-        jMenuBar.add(jMenuFile);
+        jMenu1.setText("File");
+        jMenuBar1.add(jMenu1);
 
-        setJMenuBar(jMenuBar);
+        jMenu2.setText("Edit");
+        jMenuBar1.add(jMenu2);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -855,7 +859,7 @@ public class TheGridGUI extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addComponent(jPanelClickOnScreen, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jPanelClickOnGrid, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(jPanelClickOnGrid, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 163, Short.MAX_VALUE))
                             .addComponent(jPanelToolSelection, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(theGrid, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
@@ -878,7 +882,7 @@ public class TheGridGUI extends javax.swing.JFrame {
                         .addComponent(jPanelClickOnScreen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanelToolSelection, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 102, Short.MAX_VALUE))
+                        .addGap(0, 99, Short.MAX_VALUE))
                     .addComponent(theGrid, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -1126,8 +1130,9 @@ public class TheGridGUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelToolSelection;
     private javax.swing.JLayeredPane jLayeredPaneColor;
     private javax.swing.JLayeredPane jLayeredPaneTools;
-    private javax.swing.JMenuBar jMenuBar;
-    private javax.swing.JMenu jMenuFile;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanelBlank;
     private javax.swing.JPanel jPanelClickOnGrid;
     private javax.swing.JPanel jPanelClickOnScreen;
