@@ -10,15 +10,13 @@
       <Color blue="ff" green="cc" red="99" type="rgb"/>
     </Property>
     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-      <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
-        <BevelBorder/>
-      </Border>
+      <Border info="null"/>
     </Property>
     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[310, 125]"/>
+      <Dimension value="[238, 151]"/>
     </Property>
     <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[310, 125]"/>
+      <Dimension value="[238, 151]"/>
     </Property>
   </Properties>
   <AuxValues>
@@ -36,32 +34,36 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
+          <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jRadioYellow" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="jRadioGreen" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="jRadioBlue" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="jRadioRed" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jRadioYellow" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jRadioGreen" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jRadioBlue" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jRadioRed" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jRadioLightGray" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jRadioGray" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jRadioDarkGray" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jRadioBlack" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jRadioWhite" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jRadioCyan" min="-2" max="-2" attributes="0"/>
+                          <Component id="jRadioPink" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jRadioOrange" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jRadioMagenta" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Component id="jPanelColorDisplay" alignment="1" pref="226" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jRadioLightGray" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="jRadioGray" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="jRadioDarkGray" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="jRadioBlack" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="jRadioWhite" alignment="0" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jRadioCyan" min="-2" max="-2" attributes="0"/>
-                  <Component id="jRadioPink" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="jRadioOrange" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="jRadioMagenta" alignment="0" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jPanelColorDisplay" min="-2" pref="55" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -69,36 +71,33 @@
       <Group type="103" groupAlignment="1" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="jPanelColorDisplay" alignment="1" min="-2" pref="85" max="-2" attributes="0"/>
-                  <Group type="102" alignment="1" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jRadioRed" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioWhite" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioPink" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jRadioBlue" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioLightGray" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioOrange" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jRadioGreen" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioGray" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioMagenta" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jRadioYellow" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioDarkGray" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioCyan" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                      <Component id="jRadioBlack" min="-2" max="-2" attributes="0"/>
-                  </Group>
+              <Component id="jPanelColorDisplay" min="-2" pref="39" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jRadioRed" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jRadioWhite" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jRadioPink" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
+              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jRadioBlue" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jRadioLightGray" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jRadioOrange" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jRadioGreen" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jRadioGray" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jRadioMagenta" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jRadioYellow" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jRadioDarkGray" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jRadioCyan" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+              <Component id="jRadioBlack" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -266,12 +265,12 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="51" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="81" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="35" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
       </Layout>

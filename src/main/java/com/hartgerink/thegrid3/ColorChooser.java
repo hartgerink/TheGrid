@@ -103,9 +103,9 @@ public class ColorChooser extends javax.swing.JPanel {
         jPanelColorDisplay = new javax.swing.JPanel();
 
         setBackground(new java.awt.Color(153, 204, 255));
-        setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        setPreferredSize(new java.awt.Dimension(310, 125));
-        setSize(new java.awt.Dimension(310, 125));
+        setBorder(null);
+        setPreferredSize(new java.awt.Dimension(238, 151));
+        setSize(new java.awt.Dimension(238, 151));
 
         buttonGroup1.add(jRadioRed);
         jRadioRed.setText("Red");
@@ -219,11 +219,11 @@ public class ColorChooser extends javax.swing.JPanel {
         jPanelColorDisplay.setLayout(jPanelColorDisplayLayout);
         jPanelColorDisplayLayout.setHorizontalGroup(
             jPanelColorDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 51, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         jPanelColorDisplayLayout.setVerticalGroup(
             jPanelColorDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 81, Short.MAX_VALUE)
+            .addGap(0, 35, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -233,55 +233,56 @@ public class ColorChooser extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioYellow)
-                    .addComponent(jRadioGreen)
-                    .addComponent(jRadioBlue)
-                    .addComponent(jRadioRed))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioLightGray)
-                    .addComponent(jRadioGray)
-                    .addComponent(jRadioDarkGray)
-                    .addComponent(jRadioBlack)
-                    .addComponent(jRadioWhite))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioCyan)
-                    .addComponent(jRadioPink)
-                    .addComponent(jRadioOrange)
-                    .addComponent(jRadioMagenta))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanelColorDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jRadioYellow)
+                            .addComponent(jRadioGreen)
+                            .addComponent(jRadioBlue)
+                            .addComponent(jRadioRed))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jRadioLightGray)
+                            .addComponent(jRadioGray)
+                            .addComponent(jRadioDarkGray)
+                            .addComponent(jRadioBlack)
+                            .addComponent(jRadioWhite))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jRadioCyan)
+                            .addComponent(jRadioPink)
+                            .addComponent(jRadioOrange)
+                            .addComponent(jRadioMagenta))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jPanelColorDisplay, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 226, Short.MAX_VALUE))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jPanelColorDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jRadioRed)
-                            .addComponent(jRadioWhite)
-                            .addComponent(jRadioPink))
-                        .addGap(0, 0, 0)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jRadioBlue)
-                            .addComponent(jRadioLightGray)
-                            .addComponent(jRadioOrange))
-                        .addGap(0, 0, 0)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jRadioGreen)
-                            .addComponent(jRadioGray)
-                            .addComponent(jRadioMagenta))
-                        .addGap(0, 0, 0)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jRadioYellow)
-                            .addComponent(jRadioDarkGray)
-                            .addComponent(jRadioCyan))
-                        .addGap(0, 0, 0)
-                        .addComponent(jRadioBlack)))
+                .addComponent(jPanelColorDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jRadioRed)
+                    .addComponent(jRadioWhite)
+                    .addComponent(jRadioPink))
+                .addGap(0, 0, 0)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jRadioBlue)
+                    .addComponent(jRadioLightGray)
+                    .addComponent(jRadioOrange))
+                .addGap(0, 0, 0)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jRadioGreen)
+                    .addComponent(jRadioGray)
+                    .addComponent(jRadioMagenta))
+                .addGap(0, 0, 0)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jRadioYellow)
+                    .addComponent(jRadioDarkGray)
+                    .addComponent(jRadioCyan))
+                .addGap(0, 0, 0)
+                .addComponent(jRadioBlack)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
