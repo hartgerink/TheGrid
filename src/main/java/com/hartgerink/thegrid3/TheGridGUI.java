@@ -119,13 +119,10 @@ public class TheGridGUI extends javax.swing.JFrame {
         jPanelBlank = new javax.swing.JPanel();
         jLabelColorMessage = new javax.swing.JLabel();
         theGrid = new com.hartgerink.thegrid3.TheGrid();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanelGridCoordinates.setBackground(new java.awt.Color(153, 204, 255));
+        jPanelGridCoordinates.setBackground(new java.awt.Color(255, 255, 204));
         jPanelGridCoordinates.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanelGridCoordinates.setPreferredSize(new java.awt.Dimension(150, 110));
         jPanelGridCoordinates.setSize(new java.awt.Dimension(150, 110));
@@ -164,7 +161,7 @@ public class TheGridGUI extends javax.swing.JFrame {
                                 .addComponent(jLabelGridY)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jTextFieldGridY, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 28, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanelGridCoordinatesLayout.setVerticalGroup(
@@ -649,7 +646,7 @@ public class TheGridGUI extends javax.swing.JFrame {
                         .addComponent(jLabelClickScreenY)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTextFieldClickScreenY, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addContainerGap(39, Short.MAX_VALUE))
         );
         jPanelClickOnScreenLayout.setVerticalGroup(
             jPanelClickOnScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -744,7 +741,7 @@ public class TheGridGUI extends javax.swing.JFrame {
                     .addComponent(jRadioButtonCurve)
                     .addComponent(jRadioButtonCompass)
                     .addComponent(jRadioButtonTheGrid))
-                .addContainerGap(50, Short.MAX_VALUE))
+                .addContainerGap(61, Short.MAX_VALUE))
         );
         jPanelToolSelectionLayout.setVerticalGroup(
             jPanelToolSelectionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -765,7 +762,7 @@ public class TheGridGUI extends javax.swing.JFrame {
                 .addComponent(jRadioButtonCompass)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jRadioButtonTheGrid)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
 
         jLayeredPaneColor.setLayout(new java.awt.CardLayout());
@@ -832,14 +829,6 @@ public class TheGridGUI extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        jMenu1.setText("File");
-        jMenuBar1.add(jMenu1);
-
-        jMenu2.setText("Edit");
-        jMenuBar1.add(jMenu2);
-
-        setJMenuBar(jMenuBar1);
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -882,7 +871,7 @@ public class TheGridGUI extends javax.swing.JFrame {
                         .addComponent(jPanelClickOnScreen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanelToolSelection, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 99, Short.MAX_VALUE))
+                        .addGap(0, 118, Short.MAX_VALUE))
                     .addComponent(theGrid, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -1130,9 +1119,6 @@ public class TheGridGUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelToolSelection;
     private javax.swing.JLayeredPane jLayeredPaneColor;
     private javax.swing.JLayeredPane jLayeredPaneTools;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanelBlank;
     private javax.swing.JPanel jPanelClickOnGrid;
     private javax.swing.JPanel jPanelClickOnScreen;
