@@ -31,9 +31,6 @@ public class TheGridGUI extends javax.swing.JFrame {
         for(int i=0; i<jLayeredPaneTools.getComponentCount(); i++) {
             jLayeredPaneTools.getComponent(i).setVisible(true);
         }
-        for(int i=0; i<jLayeredPaneColor.getComponentCount(); i++) {
-            jLayeredPaneColor.getComponent(i).setVisible(true);
-        }
         
         jSliderRotatePolygon.setVisible(false);
         
@@ -55,25 +52,24 @@ public class TheGridGUI extends javax.swing.JFrame {
 
         buttonGroupToolSelection = new javax.swing.ButtonGroup();
         buttonGroupPolygon = new javax.swing.ButtonGroup();
-        jPanelGridCoordinates = new javax.swing.JPanel();
-        jLabelGridCoordinates = new javax.swing.JLabel();
-        jLabelGridX = new javax.swing.JLabel();
-        jLabelGridY = new javax.swing.JLabel();
-        jTextFieldGridX = new javax.swing.JTextField();
-        jTextFieldGridY = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jPanelNavigation = new javax.swing.JPanel();
-        jSliderZoom = new javax.swing.JSlider();
-        jLabel1 = new javax.swing.JLabel();
-        jTextFieldZoom = new javax.swing.JTextField();
-        jLayeredPaneTools = new javax.swing.JLayeredPane();
         jPanelToolsClick = new javax.swing.JPanel();
         jLabelClick = new javax.swing.JLabel();
         jPanelToolsMarker = new javax.swing.JPanel();
         jLabelMarker = new javax.swing.JLabel();
         jPanelToolsLine = new javax.swing.JPanel();
         jLabelLine = new javax.swing.JLabel();
+        jPanelToolsCurve = new javax.swing.JPanel();
+        jLabelCurve = new javax.swing.JLabel();
+        jPanelToolsCompass = new javax.swing.JPanel();
+        jLabelCompass = new javax.swing.JLabel();
+        jPanelToolsTheGrid = new javax.swing.JPanel();
+        jLabelTheGrid = new javax.swing.JLabel();
         jPanelToolsPolygon = new javax.swing.JPanel();
+        jPanelPolygonSettings = new javax.swing.JPanel();
+        jCheckBoxShowPolygon = new javax.swing.JCheckBox();
+        jCheckBoxShowPolygonRotation = new javax.swing.JCheckBox();
+        jCheckBoxShowAnchor = new javax.swing.JCheckBox();
+        jSliderRotatePolygon = new javax.swing.JSlider();
         jPanelPolygonRadioButtons = new javax.swing.JPanel();
         jRadioButtonPolygonAddPoint = new javax.swing.JRadioButton();
         jRadioButtonPolygonMovePoint = new javax.swing.JRadioButton();
@@ -82,28 +78,23 @@ public class TheGridGUI extends javax.swing.JFrame {
         jButtonPolygonDeleteFirst = new javax.swing.JButton();
         jButtonPolygonDeleteLast = new javax.swing.JButton();
         jButtonPolygonDeleteAll = new javax.swing.JButton();
-        jPanelPolygonSettings = new javax.swing.JPanel();
-        jSliderRotatePolygon = new javax.swing.JSlider();
-        jCheckBoxShowPolygon = new javax.swing.JCheckBox();
-        jCheckBoxShowPolygonRotation = new javax.swing.JCheckBox();
-        jCheckBoxShowAnchor = new javax.swing.JCheckBox();
-        jPanelToolsCurve = new javax.swing.JPanel();
-        jLabelCurve = new javax.swing.JLabel();
-        jPanelToolsCompass = new javax.swing.JPanel();
-        jLabelCompass = new javax.swing.JLabel();
-        jPanelToolsTheGrid = new javax.swing.JPanel();
-        jLabelTheGrid = new javax.swing.JLabel();
-        jPanelClickOnGrid = new javax.swing.JPanel();
+        jLayeredPaneTools = new javax.swing.JLayeredPane();
+        jPanelNavigation8 = new javax.swing.JPanel();
+        jLabelZoom = new javax.swing.JLabel();
+        jTextFieldZoom = new javax.swing.JTextField();
+        jSliderZoom = new javax.swing.JSlider();
+        jLabelGridCoordinates = new javax.swing.JLabel();
+        jTextFieldGridX = new javax.swing.JTextField();
+        jLabelGridY = new javax.swing.JLabel();
+        jTextFieldGridY = new javax.swing.JTextField();
+        jButtonZeroLocation = new javax.swing.JButton();
         jLabelLastClickonGrid = new javax.swing.JLabel();
-        jLabelClickGridX = new javax.swing.JLabel();
-        jLabelClickGridY = new javax.swing.JLabel();
         jTextFieldClickGridX = new javax.swing.JTextField();
+        jLabelClickGridY = new javax.swing.JLabel();
         jTextFieldClickGridY = new javax.swing.JTextField();
-        jPanelClickOnScreen = new javax.swing.JPanel();
-        jLabelLastClickonScreen = new javax.swing.JLabel();
         jLabelClickScreenX = new javax.swing.JLabel();
-        jLabelClickScreenY = new javax.swing.JLabel();
         jTextFieldClickScreenX = new javax.swing.JTextField();
+        jLabelClickScreenY = new javax.swing.JLabel();
         jTextFieldClickScreenY = new javax.swing.JTextField();
         jPanelToolSelection = new javax.swing.JPanel();
         jLabelToolSelection = new javax.swing.JLabel();
@@ -114,126 +105,13 @@ public class TheGridGUI extends javax.swing.JFrame {
         jRadioButtonCurve = new javax.swing.JRadioButton();
         jRadioButtonCompass = new javax.swing.JRadioButton();
         jRadioButtonTheGrid = new javax.swing.JRadioButton();
-        jLayeredPaneColor = new javax.swing.JLayeredPane();
-        colorChooserPolygon = new com.hartgerink.thegrid3.ColorChooser();
-        jPanelBlank = new javax.swing.JPanel();
-        jLabelColorMessage = new javax.swing.JLabel();
+        jLayeredPane1 = new javax.swing.JLayeredPane();
         theGrid = new com.hartgerink.thegrid3.TheGrid();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jPanelGridCoordinates.setBackground(new java.awt.Color(255, 255, 204));
-        jPanelGridCoordinates.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanelGridCoordinates.setPreferredSize(new java.awt.Dimension(150, 110));
-        jPanelGridCoordinates.setSize(new java.awt.Dimension(150, 110));
-
-        jLabelGridCoordinates.setText("Grid Coordinates");
-
-        jLabelGridX.setText("X:");
-
-        jLabelGridY.setText("Y:");
-
-        jTextFieldGridX.setColumns(4);
-        jTextFieldGridX.setText("0");
-
-        jTextFieldGridY.setColumns(4);
-        jTextFieldGridY.setText("0");
-
-        jButton1.setText("Zero");
-
-        javax.swing.GroupLayout jPanelGridCoordinatesLayout = new javax.swing.GroupLayout(jPanelGridCoordinates);
-        jPanelGridCoordinates.setLayout(jPanelGridCoordinatesLayout);
-        jPanelGridCoordinatesLayout.setHorizontalGroup(
-            jPanelGridCoordinatesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelGridCoordinatesLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanelGridCoordinatesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelGridCoordinatesLayout.createSequentialGroup()
-                        .addComponent(jLabelGridX)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextFieldGridX, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE))
-                    .addGroup(jPanelGridCoordinatesLayout.createSequentialGroup()
-                        .addGroup(jPanelGridCoordinatesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabelGridCoordinates)
-                            .addGroup(jPanelGridCoordinatesLayout.createSequentialGroup()
-                                .addComponent(jLabelGridY)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextFieldGridY, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        jPanelGridCoordinatesLayout.setVerticalGroup(
-            jPanelGridCoordinatesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelGridCoordinatesLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabelGridCoordinates)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanelGridCoordinatesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelGridX)
-                    .addComponent(jTextFieldGridX, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanelGridCoordinatesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelGridY)
-                    .addComponent(jTextFieldGridY, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        jPanelNavigation.setBackground(new java.awt.Color(153, 204, 255));
-        jPanelNavigation.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanelNavigation.setPreferredSize(new java.awt.Dimension(240, 110));
-        jPanelNavigation.setSize(new java.awt.Dimension(240, 110));
-
-        jSliderZoom.setMinimum(1);
-        jSliderZoom.setValue(20);
-        jSliderZoom.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                jSliderZoomStateChanged(evt);
-            }
-        });
-
-        jLabel1.setText("Zoom:");
-
-        jTextFieldZoom.setColumns(3);
-        jTextFieldZoom.setText("20");
-
-        javax.swing.GroupLayout jPanelNavigationLayout = new javax.swing.GroupLayout(jPanelNavigation);
-        jPanelNavigation.setLayout(jPanelNavigationLayout);
-        jPanelNavigationLayout.setHorizontalGroup(
-            jPanelNavigationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelNavigationLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanelNavigationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSliderZoom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanelNavigationLayout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextFieldZoom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanelNavigationLayout.setVerticalGroup(
-            jPanelNavigationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelNavigationLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanelNavigationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jTextFieldZoom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSliderZoom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        jLayeredPaneTools.setMinimumSize(new java.awt.Dimension(500, 110));
-        jLayeredPaneTools.setSize(new java.awt.Dimension(500, 110));
-        jLayeredPaneTools.setLayout(new java.awt.CardLayout());
 
         jPanelToolsClick.setBackground(new java.awt.Color(153, 204, 255));
         jPanelToolsClick.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanelToolsClick.setMinimumSize(new java.awt.Dimension(500, 110));
         jPanelToolsClick.setPreferredSize(new java.awt.Dimension(500, 110));
-        jPanelToolsClick.setSize(new java.awt.Dimension(500, 110));
 
         jLabelClick.setText("Click");
 
@@ -254,12 +132,9 @@ public class TheGridGUI extends javax.swing.JFrame {
                 .addContainerGap(95, Short.MAX_VALUE))
         );
 
-        jLayeredPaneTools.add(jPanelToolsClick, "card2");
-
         jPanelToolsMarker.setBackground(new java.awt.Color(153, 204, 255));
         jPanelToolsMarker.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanelToolsMarker.setPreferredSize(new java.awt.Dimension(500, 110));
-        jPanelToolsMarker.setSize(new java.awt.Dimension(500, 110));
 
         jLabelMarker.setText("Marker");
 
@@ -280,12 +155,9 @@ public class TheGridGUI extends javax.swing.JFrame {
                 .addContainerGap(95, Short.MAX_VALUE))
         );
 
-        jLayeredPaneTools.add(jPanelToolsMarker, "card3");
-
         jPanelToolsLine.setBackground(new java.awt.Color(153, 204, 255));
         jPanelToolsLine.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanelToolsLine.setPreferredSize(new java.awt.Dimension(500, 110));
-        jPanelToolsLine.setSize(new java.awt.Dimension(500, 110));
 
         jLabelLine.setText("Line");
 
@@ -306,11 +178,138 @@ public class TheGridGUI extends javax.swing.JFrame {
                 .addContainerGap(95, Short.MAX_VALUE))
         );
 
-        jLayeredPaneTools.add(jPanelToolsLine, "card4");
+        jPanelToolsCurve.setBackground(new java.awt.Color(153, 204, 255));
+        jPanelToolsCurve.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanelToolsCurve.setPreferredSize(new java.awt.Dimension(500, 110));
+
+        jLabelCurve.setText("Curve");
+
+        javax.swing.GroupLayout jPanelToolsCurveLayout = new javax.swing.GroupLayout(jPanelToolsCurve);
+        jPanelToolsCurve.setLayout(jPanelToolsCurveLayout);
+        jPanelToolsCurveLayout.setHorizontalGroup(
+            jPanelToolsCurveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelToolsCurveLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabelCurve)
+                .addContainerGap(454, Short.MAX_VALUE))
+        );
+        jPanelToolsCurveLayout.setVerticalGroup(
+            jPanelToolsCurveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelToolsCurveLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabelCurve)
+                .addContainerGap(95, Short.MAX_VALUE))
+        );
+
+        jPanelToolsCompass.setBackground(new java.awt.Color(153, 204, 255));
+        jPanelToolsCompass.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanelToolsCompass.setPreferredSize(new java.awt.Dimension(500, 110));
+
+        jLabelCompass.setText("Compass");
+
+        javax.swing.GroupLayout jPanelToolsCompassLayout = new javax.swing.GroupLayout(jPanelToolsCompass);
+        jPanelToolsCompass.setLayout(jPanelToolsCompassLayout);
+        jPanelToolsCompassLayout.setHorizontalGroup(
+            jPanelToolsCompassLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelToolsCompassLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabelCompass)
+                .addContainerGap(432, Short.MAX_VALUE))
+        );
+        jPanelToolsCompassLayout.setVerticalGroup(
+            jPanelToolsCompassLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelToolsCompassLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabelCompass)
+                .addContainerGap(95, Short.MAX_VALUE))
+        );
+
+        jPanelToolsTheGrid.setBackground(new java.awt.Color(153, 204, 255));
+        jPanelToolsTheGrid.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanelToolsTheGrid.setPreferredSize(new java.awt.Dimension(500, 110));
+
+        jLabelTheGrid.setText("The Grid");
+
+        javax.swing.GroupLayout jPanelToolsTheGridLayout = new javax.swing.GroupLayout(jPanelToolsTheGrid);
+        jPanelToolsTheGrid.setLayout(jPanelToolsTheGridLayout);
+        jPanelToolsTheGridLayout.setHorizontalGroup(
+            jPanelToolsTheGridLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelToolsTheGridLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabelTheGrid)
+                .addContainerGap(437, Short.MAX_VALUE))
+        );
+        jPanelToolsTheGridLayout.setVerticalGroup(
+            jPanelToolsTheGridLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelToolsTheGridLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabelTheGrid)
+                .addContainerGap(95, Short.MAX_VALUE))
+        );
 
         jPanelToolsPolygon.setBackground(java.awt.Color.white);
         jPanelToolsPolygon.setPreferredSize(new java.awt.Dimension(500, 110));
-        jPanelToolsPolygon.setSize(new java.awt.Dimension(500, 110));
+
+        jPanelPolygonSettings.setBackground(new java.awt.Color(153, 204, 255));
+        jPanelPolygonSettings.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        jCheckBoxShowPolygon.setSelected(true);
+        jCheckBoxShowPolygon.setText("Show Polygon");
+        jCheckBoxShowPolygon.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxShowPolygonActionPerformed(evt);
+            }
+        });
+
+        jCheckBoxShowPolygonRotation.setText("Show Rotation");
+        jCheckBoxShowPolygonRotation.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxShowPolygonRotationActionPerformed(evt);
+            }
+        });
+
+        jCheckBoxShowAnchor.setText("Show Anchor");
+        jCheckBoxShowAnchor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxShowAnchorActionPerformed(evt);
+            }
+        });
+
+        jSliderRotatePolygon.setMaximum(360);
+        jSliderRotatePolygon.setValue(0);
+        jSliderRotatePolygon.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSliderRotatePolygonStateChanged(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanelPolygonSettingsLayout = new javax.swing.GroupLayout(jPanelPolygonSettings);
+        jPanelPolygonSettings.setLayout(jPanelPolygonSettingsLayout);
+        jPanelPolygonSettingsLayout.setHorizontalGroup(
+            jPanelPolygonSettingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelPolygonSettingsLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanelPolygonSettingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelPolygonSettingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jCheckBoxShowPolygonRotation, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jCheckBoxShowAnchor)
+                        .addComponent(jCheckBoxShowPolygon))
+                    .addComponent(jSliderRotatePolygon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanelPolygonSettingsLayout.setVerticalGroup(
+            jPanelPolygonSettingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelPolygonSettingsLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jCheckBoxShowPolygon)
+                .addGap(0, 0, 0)
+                .addComponent(jCheckBoxShowPolygonRotation)
+                .addGap(0, 0, 0)
+                .addComponent(jCheckBoxShowAnchor)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSliderRotatePolygon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
         jPanelPolygonRadioButtons.setBackground(new java.awt.Color(153, 204, 255));
         jPanelPolygonRadioButtons.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -346,7 +345,7 @@ public class TheGridGUI extends javax.swing.JFrame {
                 .addComponent(jRadioButtonPolygonMovePoint)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jRadioButtonPolygonSetRotation)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
 
         jPanelPolygonButtons.setBackground(new java.awt.Color(153, 204, 255));
@@ -398,72 +397,7 @@ public class TheGridGUI extends javax.swing.JFrame {
                 .addComponent(jButtonPolygonDeleteLast)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButtonPolygonDeleteAll)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        jPanelPolygonSettings.setBackground(new java.awt.Color(153, 204, 255));
-        jPanelPolygonSettings.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        jSliderRotatePolygon.setMaximum(360);
-        jSliderRotatePolygon.setValue(0);
-        jSliderRotatePolygon.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                jSliderRotatePolygonStateChanged(evt);
-            }
-        });
-
-        jCheckBoxShowPolygon.setSelected(true);
-        jCheckBoxShowPolygon.setText("Show Polygon");
-        jCheckBoxShowPolygon.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBoxShowPolygonActionPerformed(evt);
-            }
-        });
-
-        jCheckBoxShowPolygonRotation.setText("Show Rotation");
-        jCheckBoxShowPolygonRotation.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBoxShowPolygonRotationActionPerformed(evt);
-            }
-        });
-
-        jCheckBoxShowAnchor.setText("Show Anchor");
-        jCheckBoxShowAnchor.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBoxShowAnchorActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanelPolygonSettingsLayout = new javax.swing.GroupLayout(jPanelPolygonSettings);
-        jPanelPolygonSettings.setLayout(jPanelPolygonSettingsLayout);
-        jPanelPolygonSettingsLayout.setHorizontalGroup(
-            jPanelPolygonSettingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelPolygonSettingsLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanelPolygonSettingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelPolygonSettingsLayout.createSequentialGroup()
-                        .addComponent(jCheckBoxShowPolygonRotation)
-                        .addGap(18, 102, Short.MAX_VALUE))
-                    .addGroup(jPanelPolygonSettingsLayout.createSequentialGroup()
-                        .addGroup(jPanelPolygonSettingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jCheckBoxShowAnchor)
-                            .addComponent(jCheckBoxShowPolygon))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jSliderRotatePolygon, javax.swing.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        jPanelPolygonSettingsLayout.setVerticalGroup(
-            jPanelPolygonSettingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelPolygonSettingsLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jCheckBoxShowPolygon)
-                .addGap(0, 0, 0)
-                .addComponent(jCheckBoxShowPolygonRotation)
-                .addGap(0, 0, 0)
-                .addComponent(jCheckBoxShowAnchor)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSliderRotatePolygon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanelToolsPolygonLayout = new javax.swing.GroupLayout(jPanelToolsPolygon);
@@ -471,204 +405,156 @@ public class TheGridGUI extends javax.swing.JFrame {
         jPanelToolsPolygonLayout.setHorizontalGroup(
             jPanelToolsPolygonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelToolsPolygonLayout.createSequentialGroup()
-                .addComponent(jPanelPolygonRadioButtons, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(jPanelPolygonButtons, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(jPanelPolygonSettings, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap()
+                .addGroup(jPanelToolsPolygonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanelPolygonSettings, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanelPolygonRadioButtons, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanelPolygonButtons, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(88, Short.MAX_VALUE))
         );
         jPanelToolsPolygonLayout.setVerticalGroup(
             jPanelToolsPolygonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanelPolygonRadioButtons, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanelPolygonButtons, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanelPolygonSettings, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-
-        jLayeredPaneTools.add(jPanelToolsPolygon, "card5");
-
-        jPanelToolsCurve.setBackground(new java.awt.Color(153, 204, 255));
-        jPanelToolsCurve.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanelToolsCurve.setPreferredSize(new java.awt.Dimension(500, 110));
-        jPanelToolsCurve.setSize(new java.awt.Dimension(500, 110));
-
-        jLabelCurve.setText("Curve");
-
-        javax.swing.GroupLayout jPanelToolsCurveLayout = new javax.swing.GroupLayout(jPanelToolsCurve);
-        jPanelToolsCurve.setLayout(jPanelToolsCurveLayout);
-        jPanelToolsCurveLayout.setHorizontalGroup(
-            jPanelToolsCurveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelToolsCurveLayout.createSequentialGroup()
+            .addGroup(jPanelToolsPolygonLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabelCurve)
-                .addContainerGap(454, Short.MAX_VALUE))
-        );
-        jPanelToolsCurveLayout.setVerticalGroup(
-            jPanelToolsCurveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelToolsCurveLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabelCurve)
-                .addContainerGap(95, Short.MAX_VALUE))
+                .addComponent(jPanelPolygonSettings, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanelPolygonRadioButtons, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanelPolygonButtons, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(285, 285, 285))
         );
 
-        jLayeredPaneTools.add(jPanelToolsCurve, "card6");
+        jLayeredPaneTools.setMinimumSize(new java.awt.Dimension(500, 110));
+        jLayeredPaneTools.setPreferredSize(new java.awt.Dimension(310, 630));
+        jLayeredPaneTools.setSize(new java.awt.Dimension(310, 630));
+        jLayeredPaneTools.setLayout(new java.awt.CardLayout());
 
-        jPanelToolsCompass.setBackground(new java.awt.Color(153, 204, 255));
-        jPanelToolsCompass.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanelToolsCompass.setPreferredSize(new java.awt.Dimension(500, 110));
-        jPanelToolsCompass.setSize(new java.awt.Dimension(500, 110));
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1280, 720));
+        setSize(new java.awt.Dimension(1280, 720));
 
-        jLabelCompass.setText("Compass");
+        jPanelNavigation8.setBackground(new java.awt.Color(153, 204, 255));
+        jPanelNavigation8.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        javax.swing.GroupLayout jPanelToolsCompassLayout = new javax.swing.GroupLayout(jPanelToolsCompass);
-        jPanelToolsCompass.setLayout(jPanelToolsCompassLayout);
-        jPanelToolsCompassLayout.setHorizontalGroup(
-            jPanelToolsCompassLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelToolsCompassLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabelCompass)
-                .addContainerGap(432, Short.MAX_VALUE))
-        );
-        jPanelToolsCompassLayout.setVerticalGroup(
-            jPanelToolsCompassLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelToolsCompassLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabelCompass)
-                .addContainerGap(95, Short.MAX_VALUE))
-        );
+        jLabelZoom.setText("Zoom:");
 
-        jLayeredPaneTools.add(jPanelToolsCompass, "card7");
+        jTextFieldZoom.setColumns(3);
+        jTextFieldZoom.setText("20");
 
-        jPanelToolsTheGrid.setBackground(new java.awt.Color(153, 204, 255));
-        jPanelToolsTheGrid.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanelToolsTheGrid.setPreferredSize(new java.awt.Dimension(500, 110));
-        jPanelToolsTheGrid.setSize(new java.awt.Dimension(500, 110));
+        jSliderZoom.setMinimum(1);
+        jSliderZoom.setValue(20);
+        jSliderZoom.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSliderZoomStateChanged(evt);
+            }
+        });
 
-        jLabelTheGrid.setText("The Grid");
+        jLabelGridCoordinates.setText("Location X:");
 
-        javax.swing.GroupLayout jPanelToolsTheGridLayout = new javax.swing.GroupLayout(jPanelToolsTheGrid);
-        jPanelToolsTheGrid.setLayout(jPanelToolsTheGridLayout);
-        jPanelToolsTheGridLayout.setHorizontalGroup(
-            jPanelToolsTheGridLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelToolsTheGridLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabelTheGrid)
-                .addContainerGap(437, Short.MAX_VALUE))
-        );
-        jPanelToolsTheGridLayout.setVerticalGroup(
-            jPanelToolsTheGridLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelToolsTheGridLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabelTheGrid)
-                .addContainerGap(95, Short.MAX_VALUE))
-        );
+        jTextFieldGridX.setColumns(4);
+        jTextFieldGridX.setText("0");
 
-        jLayeredPaneTools.add(jPanelToolsTheGrid, "card7");
+        jLabelGridY.setText("Y:");
 
-        jPanelClickOnGrid.setBackground(new java.awt.Color(153, 204, 255));
-        jPanelClickOnGrid.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanelClickOnGrid.setPreferredSize(new java.awt.Dimension(150, 96));
-        jPanelClickOnGrid.setSize(new java.awt.Dimension(150, 96));
+        jTextFieldGridY.setColumns(4);
+        jTextFieldGridY.setText("0");
 
-        jLabelLastClickonGrid.setText("Last Click on Grid");
+        jButtonZeroLocation.setText("Zero");
 
-        jLabelClickGridX.setText("X:");
-
-        jLabelClickGridY.setText("Y:");
+        jLabelLastClickonGrid.setText("Grid X:");
 
         jTextFieldClickGridX.setColumns(4);
         jTextFieldClickGridX.setText("0");
 
+        jLabelClickGridY.setText("Y:");
+
         jTextFieldClickGridY.setColumns(4);
         jTextFieldClickGridY.setText("0");
 
-        javax.swing.GroupLayout jPanelClickOnGridLayout = new javax.swing.GroupLayout(jPanelClickOnGrid);
-        jPanelClickOnGrid.setLayout(jPanelClickOnGridLayout);
-        jPanelClickOnGridLayout.setHorizontalGroup(
-            jPanelClickOnGridLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelClickOnGridLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanelClickOnGridLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelLastClickonGrid)
-                    .addGroup(jPanelClickOnGridLayout.createSequentialGroup()
-                        .addComponent(jLabelClickGridX)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextFieldClickGridX, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanelClickOnGridLayout.createSequentialGroup()
-                        .addComponent(jLabelClickGridY)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextFieldClickGridY, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanelClickOnGridLayout.setVerticalGroup(
-            jPanelClickOnGridLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelClickOnGridLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabelLastClickonGrid)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanelClickOnGridLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelClickGridX)
-                    .addComponent(jTextFieldClickGridX, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanelClickOnGridLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelClickGridY)
-                    .addComponent(jTextFieldClickGridY, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        jPanelClickOnScreen.setBackground(new java.awt.Color(153, 204, 255));
-        jPanelClickOnScreen.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        jLabelLastClickonScreen.setText("Last Click on Screen");
-
-        jLabelClickScreenX.setText("X:");
-
-        jLabelClickScreenY.setText("Y:");
+        jLabelClickScreenX.setText("Screen X:");
 
         jTextFieldClickScreenX.setColumns(4);
         jTextFieldClickScreenX.setText("0");
 
+        jLabelClickScreenY.setText("Y:");
+
         jTextFieldClickScreenY.setColumns(4);
         jTextFieldClickScreenY.setText("0");
 
-        javax.swing.GroupLayout jPanelClickOnScreenLayout = new javax.swing.GroupLayout(jPanelClickOnScreen);
-        jPanelClickOnScreen.setLayout(jPanelClickOnScreenLayout);
-        jPanelClickOnScreenLayout.setHorizontalGroup(
-            jPanelClickOnScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelClickOnScreenLayout.createSequentialGroup()
+        javax.swing.GroupLayout jPanelNavigation8Layout = new javax.swing.GroupLayout(jPanelNavigation8);
+        jPanelNavigation8.setLayout(jPanelNavigation8Layout);
+        jPanelNavigation8Layout.setHorizontalGroup(
+            jPanelNavigation8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelNavigation8Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanelClickOnScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelLastClickonScreen)
-                    .addGroup(jPanelClickOnScreenLayout.createSequentialGroup()
-                        .addComponent(jLabelClickScreenX)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextFieldClickScreenX, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanelClickOnScreenLayout.createSequentialGroup()
-                        .addComponent(jLabelClickScreenY)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextFieldClickScreenY, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addComponent(jLabelZoom)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextFieldZoom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSliderZoom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabelGridCoordinates)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextFieldGridX, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabelGridY)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextFieldGridY, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonZeroLocation)
+                .addGap(18, 18, 18)
+                .addComponent(jLabelLastClickonGrid)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextFieldClickGridX, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabelClickGridY)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextFieldClickGridY, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabelClickScreenX)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextFieldClickScreenX, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabelClickScreenY)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextFieldClickScreenY, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(270, Short.MAX_VALUE))
         );
-        jPanelClickOnScreenLayout.setVerticalGroup(
-            jPanelClickOnScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelClickOnScreenLayout.createSequentialGroup()
+        jPanelNavigation8Layout.setVerticalGroup(
+            jPanelNavigation8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelNavigation8Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabelLastClickonScreen)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanelClickOnScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelClickScreenX)
-                    .addComponent(jTextFieldClickScreenX, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanelClickOnScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelClickScreenY)
-                    .addComponent(jTextFieldClickScreenY, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanelNavigation8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelNavigation8Layout.createSequentialGroup()
+                        .addGroup(jPanelNavigation8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelNavigation8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabelZoom)
+                                .addComponent(jTextFieldZoom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanelNavigation8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jTextFieldGridX, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabelGridY)
+                                .addComponent(jTextFieldGridY, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabelGridCoordinates, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButtonZeroLocation)
+                                .addComponent(jLabelLastClickonGrid)
+                                .addComponent(jTextFieldClickGridX, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabelClickGridY)
+                                .addComponent(jTextFieldClickGridY, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabelClickScreenX)
+                                .addComponent(jTextFieldClickScreenX, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabelClickScreenY)
+                                .addComponent(jTextFieldClickScreenY, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanelNavigation8Layout.createSequentialGroup()
+                        .addComponent(jSliderZoom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
 
         jPanelToolSelection.setBackground(new java.awt.Color(153, 204, 255));
         jPanelToolSelection.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanelToolSelection.setPreferredSize(new java.awt.Dimension(150, 235));
 
-        jLabelToolSelection.setText("Tool Selection");
+        jLabelToolSelection.setText("Tool Selection: ");
 
         buttonGroupToolSelection.add(jRadioButtonClick);
         jRadioButtonClick.setText("Click");
@@ -731,22 +617,7 @@ public class TheGridGUI extends javax.swing.JFrame {
         jPanelToolSelectionLayout.setHorizontalGroup(
             jPanelToolSelectionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelToolSelectionLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanelToolSelectionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelToolSelection)
-                    .addComponent(jRadioButtonClick)
-                    .addComponent(jRadioButtonMarker)
-                    .addComponent(jRadioButtonLine)
-                    .addComponent(jRadioButtonPolygon)
-                    .addComponent(jRadioButtonCurve)
-                    .addComponent(jRadioButtonCompass)
-                    .addComponent(jRadioButtonTheGrid))
-                .addContainerGap(61, Short.MAX_VALUE))
-        );
-        jPanelToolSelectionLayout.setVerticalGroup(
-            jPanelToolSelectionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelToolSelectionLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(10, 10, 10)
                 .addComponent(jLabelToolSelection)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jRadioButtonClick)
@@ -762,42 +633,38 @@ public class TheGridGUI extends javax.swing.JFrame {
                 .addComponent(jRadioButtonCompass)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jRadioButtonTheGrid)
-                .addContainerGap(42, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-
-        jLayeredPaneColor.setLayout(new java.awt.CardLayout());
-
-        colorChooserPolygon.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                colorChooserPolygonPropertyChange(evt);
-            }
-        });
-        jLayeredPaneColor.add(colorChooserPolygon, "card2");
-
-        jPanelBlank.setBackground(new java.awt.Color(153, 204, 255));
-        jPanelBlank.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanelBlank.setPreferredSize(new java.awt.Dimension(359, 121));
-
-        jLabelColorMessage.setText("There are no color options.");
-
-        javax.swing.GroupLayout jPanelBlankLayout = new javax.swing.GroupLayout(jPanelBlank);
-        jPanelBlank.setLayout(jPanelBlankLayout);
-        jPanelBlankLayout.setHorizontalGroup(
-            jPanelBlankLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelBlankLayout.createSequentialGroup()
+        jPanelToolSelectionLayout.setVerticalGroup(
+            jPanelToolSelectionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelToolSelectionLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabelColorMessage)
-                .addContainerGap(183, Short.MAX_VALUE))
-        );
-        jPanelBlankLayout.setVerticalGroup(
-            jPanelBlankLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelBlankLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabelColorMessage)
-                .addContainerGap(99, Short.MAX_VALUE))
+                .addGroup(jPanelToolSelectionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelToolSelection, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jRadioButtonClick)
+                    .addComponent(jRadioButtonMarker)
+                    .addComponent(jRadioButtonLine)
+                    .addComponent(jRadioButtonPolygon)
+                    .addComponent(jRadioButtonCurve)
+                    .addComponent(jRadioButtonCompass)
+                    .addComponent(jRadioButtonTheGrid))
+                .addContainerGap())
         );
 
-        jLayeredPaneColor.add(jPanelBlank, "card3");
+        jLayeredPane1.setBackground(new java.awt.Color(255, 255, 204));
+        jLayeredPane1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLayeredPane1.setOpaque(true);
+
+        javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
+        jLayeredPane1.setLayout(jLayeredPane1Layout);
+        jLayeredPane1Layout.setHorizontalGroup(
+            jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+        jLayeredPane1Layout.setVerticalGroup(
+            jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 621, Short.MAX_VALUE)
+        );
 
         theGrid.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -837,41 +704,23 @@ public class TheGridGUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanelGridCoordinates, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanelNavigation, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLayeredPaneTools, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLayeredPaneColor))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jPanelClickOnScreen, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jPanelClickOnGrid, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 163, Short.MAX_VALUE))
-                            .addComponent(jPanelToolSelection, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(theGrid, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(theGrid, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jPanelNavigation8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanelToolSelection, javax.swing.GroupLayout.DEFAULT_SIZE, 1268, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLayeredPaneColor)
-                    .addComponent(jLayeredPaneTools, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanelGridCoordinates, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE)
-                    .addComponent(jPanelNavigation, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE))
+                .addComponent(jPanelNavigation8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(jPanelToolSelection, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanelClickOnGrid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanelClickOnScreen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanelToolSelection, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 118, Short.MAX_VALUE))
+                    .addComponent(jLayeredPane1)
                     .addComponent(theGrid, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -882,44 +731,37 @@ public class TheGridGUI extends javax.swing.JFrame {
     private void jRadioButtonClickActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonClickActionPerformed
         // TODO add your handling code here:
         jLayeredPaneTools.moveToFront(jPanelToolsClick);
-        jLayeredPaneColor.moveToFront(jPanelBlank);
         
     }//GEN-LAST:event_jRadioButtonClickActionPerformed
 
     private void jRadioButtonMarkerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonMarkerActionPerformed
         // TODO add your handling code here:
         jLayeredPaneTools.moveToFront(jPanelToolsMarker);
-        jLayeredPaneColor.moveToFront(jPanelBlank);
     }//GEN-LAST:event_jRadioButtonMarkerActionPerformed
 
     private void jRadioButtonLineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonLineActionPerformed
         // TODO add your handling code here:
         jLayeredPaneTools.moveToFront(jPanelToolsLine);
-        jLayeredPaneColor.moveToFront(jPanelBlank);
     }//GEN-LAST:event_jRadioButtonLineActionPerformed
 
     private void jRadioButtonPolygonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonPolygonActionPerformed
         // TODO add your handling code here:
         jLayeredPaneTools.moveToFront(jPanelToolsPolygon);
-        jLayeredPaneColor.moveToFront(colorChooserPolygon);
     }//GEN-LAST:event_jRadioButtonPolygonActionPerformed
 
     private void jRadioButtonCurveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonCurveActionPerformed
         // TODO add your handling code here:
         jLayeredPaneTools.moveToFront(jPanelToolsCurve);
-        jLayeredPaneColor.moveToFront(jPanelBlank);
     }//GEN-LAST:event_jRadioButtonCurveActionPerformed
 
     private void jRadioButtonCompassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonCompassActionPerformed
         // TODO add your handling code here:
         jLayeredPaneTools.moveToFront(jPanelToolsCompass);
-        jLayeredPaneColor.moveToFront(jPanelBlank);
     }//GEN-LAST:event_jRadioButtonCompassActionPerformed
 
     private void jRadioButtonTheGridActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonTheGridActionPerformed
         // TODO add your handling code here:
         jLayeredPaneTools.moveToFront(jPanelToolsTheGrid);
-        jLayeredPaneColor.moveToFront(jPanelBlank);
     }//GEN-LAST:event_jRadioButtonTheGridActionPerformed
 
     private void jSliderZoomStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSliderZoomStateChanged
@@ -1003,12 +845,6 @@ public class TheGridGUI extends javax.swing.JFrame {
         theGrid.setBorder(gridUnFocused);
     }//GEN-LAST:event_theGridFocusLost
 
-    private void colorChooserPolygonPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_colorChooserPolygonPropertyChange
-        // TODO add your handling code here:
-        theGrid.polymorph.setColor(colorChooserPolygon.getColor());
-        theGrid.repaint();
-    }//GEN-LAST:event_colorChooserPolygonPropertyChange
-
     private void jButtonPolygonDeleteFirstActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPolygonDeleteFirstActionPerformed
         // TODO add your handling code here:
         theGrid.polymorph.removeFirst();
@@ -1091,39 +927,30 @@ public class TheGridGUI extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroupPolygon;
     private javax.swing.ButtonGroup buttonGroupToolSelection;
-    private com.hartgerink.thegrid3.ColorChooser colorChooserPolygon;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonPolygonDeleteAll;
     private javax.swing.JButton jButtonPolygonDeleteFirst;
     private javax.swing.JButton jButtonPolygonDeleteLast;
+    private javax.swing.JButton jButtonZeroLocation;
     private javax.swing.JCheckBox jCheckBoxShowAnchor;
     private javax.swing.JCheckBox jCheckBoxShowPolygon;
     private javax.swing.JCheckBox jCheckBoxShowPolygonRotation;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabelClick;
-    private javax.swing.JLabel jLabelClickGridX;
     private javax.swing.JLabel jLabelClickGridY;
     private javax.swing.JLabel jLabelClickScreenX;
     private javax.swing.JLabel jLabelClickScreenY;
-    private javax.swing.JLabel jLabelColorMessage;
     private javax.swing.JLabel jLabelCompass;
     private javax.swing.JLabel jLabelCurve;
     private javax.swing.JLabel jLabelGridCoordinates;
-    private javax.swing.JLabel jLabelGridX;
     private javax.swing.JLabel jLabelGridY;
     private javax.swing.JLabel jLabelLastClickonGrid;
-    private javax.swing.JLabel jLabelLastClickonScreen;
     private javax.swing.JLabel jLabelLine;
     private javax.swing.JLabel jLabelMarker;
     private javax.swing.JLabel jLabelTheGrid;
     private javax.swing.JLabel jLabelToolSelection;
-    private javax.swing.JLayeredPane jLayeredPaneColor;
+    private javax.swing.JLabel jLabelZoom;
+    private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JLayeredPane jLayeredPaneTools;
-    private javax.swing.JPanel jPanelBlank;
-    private javax.swing.JPanel jPanelClickOnGrid;
-    private javax.swing.JPanel jPanelClickOnScreen;
-    private javax.swing.JPanel jPanelGridCoordinates;
-    private javax.swing.JPanel jPanelNavigation;
+    private javax.swing.JPanel jPanelNavigation8;
     private javax.swing.JPanel jPanelPolygonButtons;
     private javax.swing.JPanel jPanelPolygonRadioButtons;
     private javax.swing.JPanel jPanelPolygonSettings;
