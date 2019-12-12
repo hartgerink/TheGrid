@@ -29,6 +29,7 @@ public class PolymorphRotator {
     private Shape shape;
     private double theta;
     private Color color;
+    private float strokeWidth;
     public boolean isVisible, anchorIsVisible;
     
     
@@ -37,6 +38,7 @@ public class PolymorphRotator {
         markerList = p.getMarkerList();
         anchor = new Marker();
         color = Color.BLUE;
+        strokeWidth = 3;
         isVisible = anchorIsVisible = false;
     }
     
@@ -71,6 +73,16 @@ public class PolymorphRotator {
         shape = transform.createTransformedShape(polygon);
     }
     
+    public void setColor(Color c) {
+        color = c;
+    }
+    
+    public void setStrokeWidth(float f) {
+        strokeWidth = f;
+    }
+    
+    
+    
     public void draw(Graphics g) {
         if(isVisible) {
             //Update settings
@@ -80,7 +92,7 @@ public class PolymorphRotator {
             //Setup graphics settings for drawing.
             Graphics2D g2 = (Graphics2D) g;
             g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-            g2.setStroke(new BasicStroke(1));
+            g2.setStroke(new BasicStroke(strokeWidth));
             g2.setColor(color);
             
             //Draw
