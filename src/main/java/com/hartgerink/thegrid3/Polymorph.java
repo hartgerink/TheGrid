@@ -21,11 +21,12 @@ import java.awt.Polygon;
 import java.awt.Shape;
 import java.awt.geom.Line2D;
 import java.awt.Point;
+import java.util.Date;
 
 public class Polymorph {
     
+    private String name;
     private List<Marker> markerList;
-    
     private boolean markerIsSelected;
     private Marker selectedMarker;
     private Color color;
@@ -33,6 +34,8 @@ public class Polymorph {
     public boolean isVisible;
     
     public Polymorph() {
+        Date d = new Date();
+        name = Long.toString(d.getTime());
         markerList = new LinkedList<Marker>();
         markerIsSelected = false;
         color = Color.BLACK;
@@ -140,13 +143,25 @@ public class Polymorph {
         }
     }
   
+    public Color getColor() {
+        return color;
+    }
     public void setColor(Color c) {
         color = c;
     }
-    
+    public float getStrokeWidth() {
+        return strokeWidth;
+    }
     public void setStrokeWidth(float f) {
         strokeWidth = f;
     }
+    public String getName() {
+        return name;
+    }
+    public void setName(String s) {
+        name = s;
+    }
+    
     
     //Drawing a Dot2Dot is like drawing the lines between the dots of a Dot-To-Dot worksheet.
     public void draw(Graphics g) {

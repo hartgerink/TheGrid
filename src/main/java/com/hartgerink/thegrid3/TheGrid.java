@@ -21,15 +21,8 @@ public class TheGrid extends JPanel{
     
     public Polymorph polymorph;
     public PolymorphRotator polymorphRotator;
-
-
-
-
-
-
     
     
-
     public Gridlines gridlines;
 
     
@@ -46,10 +39,15 @@ public class TheGrid extends JPanel{
         polymorph = new Polymorph();
         
         polymorphRotator = new PolymorphRotator(polymorph);
+        
     }
     
     public void updatePolymorphRotator() {
         polymorphRotator.updatePolymorphRotator(polymorph);
+    }
+    
+    public void PolymorphIO(Polymorph p) {
+        PolymorphIO.polymorphToXML(p);
     }
     
     

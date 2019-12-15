@@ -102,6 +102,7 @@ public class TheGridGUI extends javax.swing.JFrame {
         colorChooserPolygon = new com.hartgerink.thegrid3.ColorChooser();
         jSliderRotatePolygon = new javax.swing.JSlider();
         strokeSettingsPolygon = new com.hartgerink.thegrid3.StrokeSettings();
+        jButton1 = new javax.swing.JButton();
         jPanelToolsCurve = new javax.swing.JPanel();
         jLabelCurve = new javax.swing.JLabel();
         jPanelToolsCompass = new javax.swing.JPanel();
@@ -523,6 +524,13 @@ public class TheGridGUI extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setText("To XML");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanelToolsPolygonLayout = new javax.swing.GroupLayout(jPanelToolsPolygon);
         jPanelToolsPolygon.setLayout(jPanelToolsPolygonLayout);
         jPanelToolsPolygonLayout.setHorizontalGroup(
@@ -543,7 +551,10 @@ public class TheGridGUI extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jCheckBoxShowAnchor))
                             .addComponent(jButtonPolygonDeleteAll)
-                            .addComponent(jButtonPolygonDeleteFirst)
+                            .addGroup(jPanelToolsPolygonLayout.createSequentialGroup()
+                                .addComponent(jButtonPolygonDeleteFirst)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton1))
                             .addComponent(jButtonPolygonDeleteLast)
                             .addGroup(jPanelToolsPolygonLayout.createSequentialGroup()
                                 .addComponent(jRadioButtonPolygonAddPoint)
@@ -583,7 +594,9 @@ public class TheGridGUI extends javax.swing.JFrame {
                     .addComponent(jRadioButtonPolygonSetRotation)
                     .addComponent(jCheckBoxShowAnchor))
                 .addGap(18, 18, 18)
-                .addComponent(jButtonPolygonDeleteFirst)
+                .addGroup(jPanelToolsPolygonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonPolygonDeleteFirst)
+                    .addComponent(jButton1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButtonPolygonDeleteLast)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -927,6 +940,14 @@ public class TheGridGUI extends javax.swing.JFrame {
         theGrid.repaint();
     }//GEN-LAST:event_strokeSettingsPolygonPropertyChange
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        
+        theGrid.PolymorphIO(theGrid.polymorph);
+        
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -967,6 +988,7 @@ public class TheGridGUI extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroupPolygon;
     private javax.swing.ButtonGroup buttonGroupToolSelection;
     private com.hartgerink.thegrid3.ColorChooser colorChooserPolygon;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonPolygonDeleteAll;
     private javax.swing.JButton jButtonPolygonDeleteFirst;
     private javax.swing.JButton jButtonPolygonDeleteLast;
