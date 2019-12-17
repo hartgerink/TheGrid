@@ -28,15 +28,47 @@ public class TheGridGUI extends javax.swing.JFrame {
         //As the jLayeredPane adds jPanel(s), it sets the visiblity of those jPanel(s) to false.
         //To get the desired effect, we need all of them to be visible. This loop itererates though
         //each jPanel in the jLayeredPane and sets the visibility to true.
-        for(int i=0; i<jLayeredPaneTools.getComponentCount(); i++) {
-            jLayeredPaneTools.getComponent(i).setVisible(true);
-        }
+        displayPane();
         
         jRadioButtonPolygon.doClick();
         
         gridFocused = new LineBorder(Color.black, 3);
         gridUnFocused = new LineBorder(Color.lightGray, 3);   
 
+    }
+    
+    private void displayPane() {
+        for(int i=0; i<jLayeredPaneTools.getComponentCount(); i++) {
+            jLayeredPaneTools.getComponent(i).setVisible(false);
+        }
+        if(jRadioButtonClick.isSelected()) {
+            jPanelToolsClick.setVisible(true);
+            jLayeredPaneTools.moveToFront(jPanelToolsClick);
+        }
+        else if(jRadioButtonMarker.isSelected()) {
+            jPanelToolsMarker.setVisible(true);
+            jLayeredPaneTools.moveToFront(jPanelToolsMarker);
+        }
+        else if(jRadioButtonLine.isSelected()) {
+            jPanelToolsLine.setVisible(true);
+            jLayeredPaneTools.moveToFront(jPanelToolsLine);
+        }
+        else if(jRadioButtonPolygon.isSelected()) {
+            jPanelToolsPolygon.setVisible(true);
+            jLayeredPaneTools.moveToFront(jPanelToolsPolygon);
+        }
+        else if(jRadioButtonCurve.isSelected()) {
+            jPanelToolsCurve.setVisible(true);
+            jLayeredPaneTools.moveToFront(jPanelToolsCurve);
+        }
+        else if(jRadioButtonCompass.isSelected()) {
+            jPanelToolsCompass.setVisible(true);
+            jLayeredPaneTools.moveToFront(jPanelToolsCompass);
+        }
+        else if(jRadioButtonTheGrid.isSelected()) {
+            jPanelToolsTheGrid.setVisible(true);
+            jLayeredPaneTools.moveToFront(jPanelToolsTheGrid);
+        }
     }
 
     /**
@@ -53,6 +85,7 @@ public class TheGridGUI extends javax.swing.JFrame {
         jSliderPolygonStrokeWidth = new javax.swing.JSlider();
         jTextFieldPolygonStrokeWidth = new javax.swing.JTextField();
         jLabelPolygonStrokeWidth = new javax.swing.JLabel();
+        buttonGroupLine = new javax.swing.ButtonGroup();
         jPanelNavigation = new javax.swing.JPanel();
         jLabelZoom = new javax.swing.JLabel();
         jTextFieldZoom = new javax.swing.JTextField();
@@ -86,6 +119,14 @@ public class TheGridGUI extends javax.swing.JFrame {
         jLabelMarker = new javax.swing.JLabel();
         jPanelToolsLine = new javax.swing.JPanel();
         jLabelLine = new javax.swing.JLabel();
+        colorChooserLine = new com.hartgerink.thegrid3.ColorChooser();
+        strokeSettingsLine = new com.hartgerink.thegrid3.StrokeSettings();
+        jRadioButtonLineAddPoint = new javax.swing.JRadioButton();
+        jRadioButtonLineMovePoint = new javax.swing.JRadioButton();
+        jCheckBoxShowLines = new javax.swing.JCheckBox();
+        jButtonLineDeleteFirst = new javax.swing.JButton();
+        jButtonLineDeleteLast = new javax.swing.JButton();
+        jButtonLineDeleteAll = new javax.swing.JButton();
         jPanelToolsPolygon = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jCheckBoxShowPolygon = new javax.swing.JCheckBox();
@@ -410,7 +451,28 @@ public class TheGridGUI extends javax.swing.JFrame {
         jPanelToolsLine.setPreferredSize(new java.awt.Dimension(250, 630));
         jPanelToolsLine.setSize(new java.awt.Dimension(250, 630));
 
+        jLabelLine.setFont(new java.awt.Font("sansserif", 1, 24)); // NOI18N
         jLabelLine.setText("Line");
+
+        buttonGroupLine.add(jRadioButtonLineAddPoint);
+        jRadioButtonLineAddPoint.setSelected(true);
+        jRadioButtonLineAddPoint.setText("Add Point");
+
+        buttonGroupLine.add(jRadioButtonLineMovePoint);
+        jRadioButtonLineMovePoint.setText("Move Point");
+
+        jCheckBoxShowLines.setText("Show Lines");
+
+        jButtonLineDeleteFirst.setText("Delete First");
+
+        jButtonLineDeleteLast.setText("Delete Last");
+
+        jButtonLineDeleteAll.setText("Delete All");
+        jButtonLineDeleteAll.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonLineDeleteAllActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanelToolsLineLayout = new javax.swing.GroupLayout(jPanelToolsLine);
         jPanelToolsLine.setLayout(jPanelToolsLineLayout);
@@ -418,15 +480,45 @@ public class TheGridGUI extends javax.swing.JFrame {
             jPanelToolsLineLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelToolsLineLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabelLine)
-                .addContainerGap(217, Short.MAX_VALUE))
+                .addGroup(jPanelToolsLineLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabelLine)
+                    .addComponent(colorChooserLine, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(strokeSettingsLine, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanelToolsLineLayout.createSequentialGroup()
+                        .addComponent(jRadioButtonLineAddPoint)
+                        .addGap(18, 18, 18)
+                        .addComponent(jCheckBoxShowLines))
+                    .addComponent(jRadioButtonLineMovePoint)
+                    .addComponent(jButtonLineDeleteFirst)
+                    .addComponent(jButtonLineDeleteLast)
+                    .addComponent(jButtonLineDeleteAll))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        jPanelToolsLineLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jButtonLineDeleteAll, jButtonLineDeleteFirst, jButtonLineDeleteLast});
+
         jPanelToolsLineLayout.setVerticalGroup(
             jPanelToolsLineLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelToolsLineLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabelLine)
-                .addContainerGap(615, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(colorChooserLine, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(strokeSettingsLine, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelToolsLineLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jRadioButtonLineAddPoint)
+                    .addComponent(jCheckBoxShowLines))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jRadioButtonLineMovePoint)
+                .addGap(18, 18, 18)
+                .addComponent(jButtonLineDeleteFirst)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonLineDeleteLast)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonLineDeleteAll)
+                .addContainerGap(202, Short.MAX_VALUE))
         );
 
         jLayeredPaneTools.add(jPanelToolsLine, "card4");
@@ -758,38 +850,37 @@ public class TheGridGUI extends javax.swing.JFrame {
 
     private void jRadioButtonClickActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonClickActionPerformed
         // TODO add your handling code here:
-        jLayeredPaneTools.moveToFront(jPanelToolsClick);
-        
+        displayPane();
     }//GEN-LAST:event_jRadioButtonClickActionPerformed
 
     private void jRadioButtonMarkerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonMarkerActionPerformed
         // TODO add your handling code here:
-        jLayeredPaneTools.moveToFront(jPanelToolsMarker);
+        displayPane();
     }//GEN-LAST:event_jRadioButtonMarkerActionPerformed
 
     private void jRadioButtonLineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonLineActionPerformed
         // TODO add your handling code here:
-        jLayeredPaneTools.moveToFront(jPanelToolsLine);
+        displayPane();
     }//GEN-LAST:event_jRadioButtonLineActionPerformed
 
     private void jRadioButtonPolygonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonPolygonActionPerformed
         // TODO add your handling code here:
-        jLayeredPaneTools.moveToFront(jPanelToolsPolygon);
+        displayPane();
     }//GEN-LAST:event_jRadioButtonPolygonActionPerformed
 
     private void jRadioButtonCurveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonCurveActionPerformed
         // TODO add your handling code here:
-        jLayeredPaneTools.moveToFront(jPanelToolsCurve);
+        displayPane();
     }//GEN-LAST:event_jRadioButtonCurveActionPerformed
 
     private void jRadioButtonCompassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonCompassActionPerformed
         // TODO add your handling code here:
-        jLayeredPaneTools.moveToFront(jPanelToolsCompass);
+        displayPane();
     }//GEN-LAST:event_jRadioButtonCompassActionPerformed
 
     private void jRadioButtonTheGridActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonTheGridActionPerformed
         // TODO add your handling code here:
-        jLayeredPaneTools.moveToFront(jPanelToolsTheGrid);
+        displayPane();
     }//GEN-LAST:event_jRadioButtonTheGridActionPerformed
 
     private void jSliderZoomStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSliderZoomStateChanged
@@ -818,6 +909,7 @@ public class TheGridGUI extends javax.swing.JFrame {
                 
             }
             else if(jRadioButtonLine.isSelected()) {
+                clickLine(evt);
                 
             }
             else if(jRadioButtonPolygon.isSelected()) {
@@ -858,6 +950,27 @@ public class TheGridGUI extends javax.swing.JFrame {
         theGrid.updatePolymorphRotator();
         theGrid.repaint();
     }
+    
+    private void clickLine(java.awt.event.MouseEvent evt) {
+        //Left-Click
+        if(evt.getButton() == MouseEvent.BUTTON1) {
+            if(jRadioButtonLineAddPoint.isSelected()) {
+                theGrid.line.click(evt.getX(), evt.getY());
+            }
+        }
+        //Right-Click
+        else if(evt.getButton() == MouseEvent.BUTTON3) {
+        }
+        //Middle-Click
+        else if(evt.getButton() == MouseEvent.BUTTON2) {
+        }
+        else {
+            //Do Nothing.
+        }
+        theGrid.repaint();
+    }
+    
+    
     
     private void theGridKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_theGridKeyPressed
         // TODO add your handling code here:
@@ -948,6 +1061,12 @@ public class TheGridGUI extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jButtonLineDeleteAllActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLineDeleteAllActionPerformed
+        // TODO add your handling code here:
+        theGrid.line.clear();
+        theGrid.repaint();
+    }//GEN-LAST:event_jButtonLineDeleteAllActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -985,15 +1104,21 @@ public class TheGridGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroupLine;
     private javax.swing.ButtonGroup buttonGroupPolygon;
     private javax.swing.ButtonGroup buttonGroupToolSelection;
+    private com.hartgerink.thegrid3.ColorChooser colorChooserLine;
     private com.hartgerink.thegrid3.ColorChooser colorChooserPolygon;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButtonLineDeleteAll;
+    private javax.swing.JButton jButtonLineDeleteFirst;
+    private javax.swing.JButton jButtonLineDeleteLast;
     private javax.swing.JButton jButtonPolygonDeleteAll;
     private javax.swing.JButton jButtonPolygonDeleteFirst;
     private javax.swing.JButton jButtonPolygonDeleteLast;
     private javax.swing.JButton jButtonZeroLocation;
     private javax.swing.JCheckBox jCheckBoxShowAnchor;
+    private javax.swing.JCheckBox jCheckBoxShowLines;
     private javax.swing.JCheckBox jCheckBoxShowPolygon;
     private javax.swing.JCheckBox jCheckBoxShowPolygonRotation;
     private javax.swing.JLabel jLabel1;
@@ -1027,6 +1152,8 @@ public class TheGridGUI extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButtonCompass;
     private javax.swing.JRadioButton jRadioButtonCurve;
     private javax.swing.JRadioButton jRadioButtonLine;
+    private javax.swing.JRadioButton jRadioButtonLineAddPoint;
+    private javax.swing.JRadioButton jRadioButtonLineMovePoint;
     private javax.swing.JRadioButton jRadioButtonMarker;
     private javax.swing.JRadioButton jRadioButtonPolygon;
     private javax.swing.JRadioButton jRadioButtonPolygonAddPoint;
@@ -1045,6 +1172,7 @@ public class TheGridGUI extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldGridY;
     private javax.swing.JTextField jTextFieldPolygonStrokeWidth;
     private javax.swing.JTextField jTextFieldZoom;
+    private com.hartgerink.thegrid3.StrokeSettings strokeSettingsLine;
     private com.hartgerink.thegrid3.StrokeSettings strokeSettingsPolygon;
     private com.hartgerink.thegrid3.TheGrid theGrid;
     // End of variables declaration//GEN-END:variables

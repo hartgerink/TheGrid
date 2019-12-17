@@ -17,14 +17,20 @@ import java.awt.Point;
 public class Marker {
 
     private int x,y;
+    public boolean isSet;
+    public boolean isSelected;
     
     public Marker(int screenX, int screenY) {
         x = Gridlines.screenToGridX(screenX);
         y = Gridlines.screenToGridY(screenY);
+        isSet = true;
+        isSelected = false;
     }
     
     public Marker() {
         x = y = 0;
+        isSet = false;
+        isSelected = false;
     }
     
     //Translate the Marker's X coordinate so that it can be used for drawing graphics on the screen.
@@ -60,6 +66,13 @@ public class Marker {
     public void set(int gridX, int gridY) {
         x = gridX;
         y = gridY;
+        isSet = true;
+    }
+    
+    public void setFromScreen(int screenX, int screenY) {
+        x = Gridlines.screenToGridX(screenX);
+        y = Gridlines.screenToGridY(screenY);
+        isSet = true;
     }
     
     public Point getPoint() {

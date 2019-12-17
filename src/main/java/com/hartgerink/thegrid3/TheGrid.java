@@ -22,6 +22,8 @@ public class TheGrid extends JPanel{
     public Polymorph polymorph;
     public PolymorphRotator polymorphRotator;
     
+    public Line line;
+    
     
     public Gridlines gridlines;
 
@@ -39,6 +41,8 @@ public class TheGrid extends JPanel{
         polymorph = new Polymorph();
         
         polymorphRotator = new PolymorphRotator(polymorph);
+        
+        line = new Line();
         
     }
     
@@ -71,6 +75,7 @@ public class TheGrid extends JPanel{
         
         polymorphRotator.drawAnchor(g);
         
+        line.draw(g);
         
        
         

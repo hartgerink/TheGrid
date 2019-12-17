@@ -35,6 +35,32 @@ public class Line {
         strokeWidth = f;
     }
     
+    public void clear() {
+        pointA = new Marker();
+        pointB = new Marker();
+        color = Color.BLACK;
+        strokeWidth = 3.0f;
+    }
+    
+    public void click(int screenX, int screenY) {
+        if(!pointA.isSet && !pointB.isSet) {
+            pointA.setFromScreen(screenX, screenY);
+        }
+        else if(pointA.isSet && !pointB.isSet) {
+            pointB.setFromScreen(screenX, screenY);
+        }
+        else {
+            //Do Nothing.
+        }
+    }
+    
+    
+    
+    public void addPoint(int x, int y) {
+        pointA.setFromScreen(x,y);
+    }
+   
+    
     public void draw(Graphics g) {
         //Setup graphics settings for drawing.
         Graphics2D g2 = (Graphics2D) g;
@@ -42,6 +68,18 @@ public class Line {
         g2.setStroke(new BasicStroke(strokeWidth));
         g2.setColor(color);
         
-        g2.drawLine(pointA.getScreenX(), pointA.getScreenY(), pointB.getScreenX(), pointB.getScreenY());
+        int zoom = Gridlines.getZoom()/2;
+        int offset = zoom/2;
+        
+        
+        if(pointA.isSet && !pointB.isSet) {
+            g2.setStroke(new BasicStroke(3));
+            g2.setColor(Color.BLUE);
+            g2.drawOval(pointA.getScreenX() - offset, pointA.getScreenY() - offset, zoom, zoom);
+        }
+        
+        if(pointA.isSet && pointB.isSet) {
+            g2.drawLine(pointA.getScreenX(), pointA.getScreenY(), pointB.getScreenX(), pointB.getScreenY());
+        }
     }
 }

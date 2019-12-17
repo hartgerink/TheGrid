@@ -26,6 +26,8 @@
         <Property name="text" type="java.lang.String" value="Stroke Width:"/>
       </Properties>
     </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroupLine">
+    </Component>
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
@@ -566,10 +568,23 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabelLine" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="217" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabelLine" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="colorChooserLine" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="strokeSettingsLine" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jRadioButtonLineAddPoint" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jCheckBoxShowLines" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="jRadioButtonLineMovePoint" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButtonLineDeleteFirst" linkSize="2" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButtonLineDeleteLast" linkSize="2" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButtonLineDeleteAll" linkSize="2" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -578,7 +593,24 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabelLine" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="615" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="colorChooserLine" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="strokeSettingsLine" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jRadioButtonLineAddPoint" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jCheckBoxShowLines" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jRadioButtonLineMovePoint" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jButtonLineDeleteFirst" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jButtonLineDeleteLast" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jButtonLineDeleteAll" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="202" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -586,8 +618,55 @@
           <SubComponents>
             <Component class="javax.swing.JLabel" name="jLabelLine">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="sansserif" size="24" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Line"/>
               </Properties>
+            </Component>
+            <Component class="com.hartgerink.thegrid3.ColorChooser" name="colorChooserLine">
+            </Component>
+            <Component class="com.hartgerink.thegrid3.StrokeSettings" name="strokeSettingsLine">
+            </Component>
+            <Component class="javax.swing.JRadioButton" name="jRadioButtonLineAddPoint">
+              <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="buttonGroupLine"/>
+                </Property>
+                <Property name="selected" type="boolean" value="true"/>
+                <Property name="text" type="java.lang.String" value="Add Point"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JRadioButton" name="jRadioButtonLineMovePoint">
+              <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="buttonGroupLine"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Move Point"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="jCheckBoxShowLines">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Show Lines"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="jButtonLineDeleteFirst">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Delete First"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="jButtonLineDeleteLast">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Delete Last"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="jButtonLineDeleteAll">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Delete All"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonLineDeleteAllActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
