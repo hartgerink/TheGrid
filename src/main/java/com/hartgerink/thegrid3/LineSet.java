@@ -26,8 +26,14 @@ import java.util.Date;
  */
 public class LineSet {
     private List<Line> lineList;
+    
     private boolean lineIsSelected;
+    
+    
     private Line selectedLine;
+    private Line workingLine;
+    
+    
     public boolean isVisible;
 
 
@@ -35,6 +41,21 @@ public class LineSet {
         lineList = new LinkedList<Line>();
         lineIsSelected = false;
         isVisible = true;
+        workingLine = new Line();
+    }
+
+    public void click(int screenX, int screenY) {
+        if(!workingLine.pointA.isSet && !workingLine.pointB.isSet) {
+            workingLine.pointA.setFromScreen(screenX, screenY);
+        }
+        else if(workingLine.pointA.isSet && !workingLine.pointB.isSet) {
+            workingLine.pointB.setFromScreen(screenX, screenY);
+            lineList.add(workingLine);
+            workingLine = new Line();
+        }
+        else {
+            //Do Nothing.
+        }
     }
 
 
@@ -60,6 +81,21 @@ public class LineSet {
 
     public void clear() {
         lineList.clear();
+    }
+    
+    public void draw(Graphics g) {
+        //Setup graphics settings for drawing.
+        Graphics2D g2 = (Graphics2D) g;
+        g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+        //g2.setStroke(new BasicStroke(3));
+        //g2.setColor(Color.BLACK);
+        
+        
+        for(int i=0; i<lineList.size(); i++) {
+            lineList.get(i).draw(g);
+        }
+        
+        
     }
     
 }

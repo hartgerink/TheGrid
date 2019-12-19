@@ -955,7 +955,7 @@ public class TheGridGUI extends javax.swing.JFrame {
         //Left-Click
         if(evt.getButton() == MouseEvent.BUTTON1) {
             if(jRadioButtonLineAddPoint.isSelected()) {
-                theGrid.line.click(evt.getX(), evt.getY());
+                theGrid.lineSet.click(evt.getX(), evt.getY());
             }
         }
         //Right-Click

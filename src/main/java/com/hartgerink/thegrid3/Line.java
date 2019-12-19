@@ -16,9 +16,9 @@ import java.awt.BasicStroke;
  * @author kevinhartgerink
  */
 public class Line {
-    private Marker pointA, pointB;
-    private Color color;
-    private float strokeWidth;
+    public Marker pointA, pointB;
+    public Color color;
+    public float strokeWidth;
     
     
     public Line() {
@@ -54,7 +54,9 @@ public class Line {
         }
     }
     
-    
+    public boolean isComplete() {
+        return (pointA.isSet && pointB.isSet);
+    }
     
     public void addPoint(int x, int y) {
         pointA.setFromScreen(x,y);
